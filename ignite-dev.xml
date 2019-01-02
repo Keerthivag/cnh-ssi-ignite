@@ -23,6 +23,15 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
+        <property name="collisionSpi">
+		      <bean class="org.apache.ignite.spi.collision.priorityqueue.PriorityQueueCollisionSpi">
+            <!-- 
+              Change the parallel job number if needed.
+              Default is number of cores times 2.
+            -->
+			      <property name="parallelJobsNumber" value="5"/>
+		      </bean>
+	      </property>
         <!-- Redefining maximum memory size for the cluster node usage. -->
         <property name="dataStorageConfiguration">
             <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
