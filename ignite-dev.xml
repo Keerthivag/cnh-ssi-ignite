@@ -23,18 +23,6 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
-        <property name="cacheConfiguration">
-            <list>
-                <!-- Partitioned cache example configuration (Atomic mode). -->
-                <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <!--<property name="atomicityMode" value="ATOMIC"/>-->
-                    <!-- Set cache mode. -->
-                    <property name="cacheMode" value="PARTITIONED"/>
-                    <property name="backups" value="1"/>
-                    <property name="statisticsEnabled" value="true" />
-                </bean>
-            </list>
-        </property>
         <property name="collisionSpi">
             <bean class="org.apache.ignite.spi.collision.priorityqueue.PriorityQueueCollisionSpi">
                 <!-- 
