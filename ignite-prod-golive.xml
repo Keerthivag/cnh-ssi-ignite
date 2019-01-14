@@ -46,7 +46,7 @@
                 <!-- Changing WAL Mode. -->
                 <property name="walMode" value="NONE"/>
                 <!-- Enable write throttling. -->
-                <property name="writeThrottlingEnabled" value="true"/>
+                <property name="writeThrottlingEnabled" value="false"/>
             </bean>
         </property>
         <!-- Explicitly configure TCP discovery SPI to provide list of initial nodes. -->
